@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entreple | Build. Launch. Scale.</title>
+    <title>Entreple | The Hook - Audience Building System</title>
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-nav-links">
+            <a href="#products" class="m-link" onclick="toggleMenu()">Products</a>
             <a href="#protocol" class="m-link" onclick="toggleMenu()">Protocol</a>
             <a href="#proof" class="m-link" onclick="toggleMenu()">Evidence</a>
-            <a href="#pricing" class="m-link" onclick="toggleMenu()">Pricing</a>
-            <a href="https://whop.com/checkout/plan_Yahw2GjEPR97H" class="btn-primary m-btn">Join Seed</a>
+            <a href="https://whop.com/checkout/plan_TduS92Cl2Vlj4" target="_blank" class="btn-primary m-btn" onclick="toggleMenu()">Get The Hook</a>
         </div>
     </div>
 
     <nav id="navbar">
         <div class="container nav-content">
-            <a href="#" class="brand">
-                <img src="logo.png" alt="Entreple" width="28" height="28">
+            <a href="entreple.com" class="brand">
+                <img src="logo.png" alt="Entreple" width="28" height="28" style="border-radius: 6px;">
                 <span>Entreple</span>
             </a>
             
             <div class="nav-right desktop-only">
+                <a href="#products" class="nav-link">Products</a>
                 <a href="#protocol" class="nav-link">Protocol</a>
                 <a href="#proof" class="nav-link">Evidence</a>
-                <a href="https://whop.com/checkout/plan_Yahw2GjEPR97H" class="btn-xs">Join Seed</a>
+                <a href="https://whop.com/checkout/plan_TduS92Cl2Vlj4" target="_blank" class="btn-xs">Get The Hook</a>
             </div>
 
             <div class="hamburger mobile-only" onclick="toggleMenu()">
@@ -44,17 +45,16 @@
 
     <section class="hero">
         <div class="container hero-container">
-            <div class="hero-badge fade-in">Applications Open for Cohort #01</div>
+            <div class="hero-badge fade-in">Field-Tested Growth Systems</div>
             <h1 class="fade-in delay-1">
-                Build. Launch. <br>
-                <span class="text-gradient">Dominate.</span>
+                Command Attention.<br>
+                <span class="text-gradient">Scale Revenue.</span>
             </h1>
             <p class="hero-desc fade-in delay-2">
-                The 5-day elimination cohort. We give you a mission at 09:00 AM. You execute in 24 hours or get banned forever. No theory. Just results.
+                No theory. Just battle-tested frameworks. Leverage social media algorithms to build a massive audience and turn your traffic into an automated cash flow.
             </p>
             <div class="hero-cta fade-in delay-3">
-                <a href="https://whop.com/checkout/plan_Yahw2GjEPR97H" class="btn-primary">Start the Sprint</a>
-                <span class="price-tag">$39 / one-time</span>
+                <a href="https://whop.com/checkout/plan_TduS92Cl2Vlj4" target="_blank" class="btn-primary">Unlock Digital Products</a>
             </div>
             
             <div class="hero-visual fade-in delay-4">
@@ -113,22 +113,66 @@
         </div>
     </section>
 
-    <section class="protocol" id="protocol">
+    <section class="products" id="products">
         <div class="container">
-            <div class="section-head">
-                <h2>The 5-Day Protocol</h2>
-                <p>A structured path from zero to first sale.</p>
+            <div class="section-head fade-in">
+                <h2>Digital Library</h2>
+                <p>Proven playbooks to capture attention, build an audience, and monetize your traffic.</p>
             </div>
 
-            <div class="protocol-grid">
+            <div class="product-grid fade-in delay-1">
+                <div class="product-card featured-product">
+                    <div class="product-badge">Flagship Product</div>
+                    <div class="product-content">
+                        <h3>The Hook</h3>
+                        <p class="product-tagline">How I Engineered 40,000 Followers in 35 Days.</p>
+                        <p>The exact 3-second psychological triggers, content frameworks, and the uncut case study behind a 2.9M-views viral breakout. Stop guessing and start scaling.</p>
+                        <ul class="product-features">
+                            <li>✓ Step-by-Step Tactical Case Study</li>
+                            <li>✓ 3-Second Retention Frameworks</li>
+                            <li>✓ The Viral Hook Vault (Templates)</li>
+                        </ul>
+                        <div class="product-footer">
+                            <span class="price">$49.90</span>
+                            <a href="https://whop.com/checkout/plan_TduS92Cl2Vlj4" target="_blank" class="btn-primary">Download Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-content">
+                        <h3>Short-Form Algorithm Secrets</h3>
+                        <p>The math behind videos with millions of views. Editing and storytelling techniques to keep audience retention over 70%.</p>
+                        <ul class="product-features" style="margin-bottom: 20px;">
+                            <li>✓ Editing & Jump-Cut Tactics</li>
+                            <li>✓ Algorithm Triggers</li>
+                        </ul>
+                        <div class="product-footer">
+                            <span class="price">$29.90</span>
+                            <a href="#" class="btn-primary product-btn-alt">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="protocol" id="protocol">
+        <div class="container">
+            <div class="section-head fade-in">
+                <h2>The Growth Protocol</h2>
+                <p>A systematic framework from zero to your first automated sale.</p>
+            </div>
+
+            <div class="protocol-grid fade-in delay-1">
                 <div class="step-card">
                     <div class="step-icon">01</div>
                     <div class="step-content">
                         <h3>Market Positioning</h3>
-                        <p>Define the battlefield. Identify exactly who pays and why.</p>
+                        <p>Define the battlefield. Identify exactly who pays and which specific problem you solve.</p>
                         <ul class="micro-tasks">
-                            <li>Find Niche</li>
-                            <li>Problem Set</li>
+                            <li>Niche Selection</li>
+                            <li>Pain-Point Analysis</li>
                         </ul>
                     </div>
                 </div>
@@ -136,11 +180,11 @@
                 <div class="step-card">
                     <div class="step-icon">02</div>
                     <div class="step-content">
-                        <h3>Identity Forging</h3>
-                        <p>Building a facade that commands authority and trust.</p>
+                        <h3>Attention Machine</h3>
+                        <p>Turn social media algorithms into your 24/7 unpaid sales team.</p>
                         <ul class="micro-tasks">
-                            <li>Logo Design</li>
-                            <li>Bio Setup</li>
+                            <li>Viral Hook Engineering</li>
+                            <li>Content Calibration</li>
                         </ul>
                     </div>
                 </div>
@@ -148,11 +192,11 @@
                 <div class="step-card">
                     <div class="step-icon">03</div>
                     <div class="step-content">
-                        <h3>The Irresistible Offer</h3>
-                        <p>Crafting the 'Weapon'. Pricing & sales psychology.</p>
+                        <h3>The Sales Funnel</h3>
+                        <p>Build automated systems that convert cold traffic into warm buyers seamlessly.</p>
                         <ul class="micro-tasks">
-                            <li>Pricing</li>
-                            <li>Deliverables</li>
+                            <li>Lead Generation</li>
+                            <li>Psychological Copywriting</li>
                         </ul>
                     </div>
                 </div>
@@ -160,21 +204,12 @@
                 <div class="step-card">
                     <div class="step-icon">04</div>
                     <div class="step-content">
-                        <h3>Infrastructure</h3>
-                        <p>Setting up landing pages and payment gateways.</p>
+                        <h3>Scale & Automate</h3>
+                        <p>Set up the infrastructure to process payments and deliver products while you sleep.</p>
                         <ul class="micro-tasks">
-                            <li>Website</li>
-                            <li>Stripe/Wise</li>
+                            <li>Stripe Integration</li>
+                            <li>Digital Fulfillment</li>
                         </ul>
-                    </div>
-                </div>
-
-                <div class="step-card featured-step">
-                    <div class="step-icon">05</div>
-                    <div class="step-content">
-                        <h3>The Launch</h3>
-                        <p>Open fire. We go live, drive traffic, and secure the bag.</p>
-                        <a href="https://whop.com/checkout/plan_Yahw2GjEPR97H" class="step-btn">Start Now &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -182,11 +217,11 @@
     </section>
 
     <section class="evidence" id="proof">
-        <div class="container evidence-layout">
+        <div class="container evidence-layout fade-in">
             
             <div class="evidence-text">
                 <h2>Numbers Don't Lie.</h2>
-                <p class="lead">Most gurus show you rented Lamborghinis. We show you the analytics dashboard.</p>
+                <p class="lead">Most gurus show you rented Lamborghinis. We show you the analytics dashboard and hard data.</p>
                 
                 <div class="stat-points">
                     <div class="point">
@@ -195,7 +230,7 @@
                         </div>
                         <div>
                             <h4>Viral Reach</h4>
-                            <p>2.9M Views on a single video means we cracked the algorithm code.</p>
+                            <p>2.9M views on a single video proves we cracked the short-form code.</p>
                         </div>
                     </div>
                     <div class="point">
@@ -204,7 +239,7 @@
                         </div>
                         <div>
                             <h4>Community Growth</h4>
-                            <p>0 to 40,000 followers in just 35 days. Organic. No ads.</p>
+                            <p>0 to 40,000 followers in just 35 days. Purely organic. Zero ad spend.</p>
                         </div>
                     </div>
                 </div>
@@ -223,16 +258,16 @@
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-brand">
-                <img src="logo.png" alt="Entreple" width="24">
+                <img src="logo.png" alt="Entreple" width="24" style="border-radius: 4px;">
                 <span class="f-name">Entreple</span>
-                <p class="f-desc">The execution-first community for young founders. Built to scale.</p>
+                <p class="f-desc">The execution-first digital publishing brand for modern founders.</p>
             </div>
             
             <div class="footer-links">
                 <h4>Platform</h4>
+                <a href="#products">Products</a>
                 <a href="#protocol">Protocol</a>
                 <a href="#proof">Evidence</a>
-                <a href="#pricing">Pricing</a>
             </div>
             
             <div class="footer-links">
@@ -244,7 +279,7 @@
             
             <div class="footer-newsletter">
                 <h4>Stay Updated</h4>
-                <p>Get the latest viral tactics in your inbox.</p>
+                <p>Get the latest viral tactics and product drops in your inbox.</p>
                 <form class="newsletter-form">
                     <input type="email" placeholder="Enter your email">
                     <button type="button">→</button>
@@ -254,13 +289,13 @@
         <div class="container footer-bottom">
             <p>&copy; 2026 Entreple Inc. All rights reserved.</p>
             <div class="socials">
-                <a href="#">X</a>
+                <a href="#">X (Twitter)</a>
                 <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>
