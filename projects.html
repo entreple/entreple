@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Entreple</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; padding: 0 5% 100px 5%; max-width: 1400px; margin: 0 auto; }
+    .project-card { background: #0a0a0a; border: 1px solid #222; padding: 40px; border-radius: 12px; transition: border-color 0.3s; }
+    .project-card:hover { border-color: #555; }
+    .project-card h3 { font-size: 1.8rem; margin-bottom: 10px; }
+    .project-tag { display: inline-block; padding: 5px 12px; background: #222; font-size: 0.8rem; border-radius: 4px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+    .project-card p { color: var(--text-muted); margin-bottom: 30px; line-height: 1.6; }
+    .btn-preview { width: 100%; padding: 15px; background: #fff; color: #000; border: none; border-radius: 6px; cursor: pointer; font-weight: 700; transition: background 0.3s; }
+    .btn-preview:hover { background: #e0e0e0; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">Entreple.</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="btn-primary">Inquire Now</a>
+  </nav>
+
+  <div class="page-header">
+    <h1 style="margin-bottom: 15px;">Curated Portfolio</h1>
+    <p>A selection of premium digital interfaces and startup identities crafted by Entreple.</p>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card">
+      <span class="project-tag">UI/UX Design</span>
+      <h3>Aura Residences</h3>
+      <p>A sophisticated web interface designed for a luxury real estate agency. Focused on high-end property showcases and exclusive consultant networking.</p>
+      <button class="btn-preview" onclick="openModal('https://example.com')">Preview Design</button>
+    </div>
+
+    <div class="project-card">
+      <span class="project-tag">E-Commerce Web Design</span>
+      <h3>Chrono Elite</h3>
+      <p>Minimalist and conversion-optimized landing page designed for a high-end luxury watch brand. Emphasizes product prestige and elegance.</p>
+      <button class="btn-preview" onclick="openModal('https://example.com')">Preview Design</button>
+    </div>
+
+    <div class="project-card">
+      <span class="project-tag">Startup Identity</span>
+      <h3>Vanguard Financial</h3>
+      <p>Complete visual identity and dashboard UI design for a private wealth management startup targeting high-net-worth individuals.</p>
+      <button class="btn-preview" onclick="openModal('https://example.com')">Preview Design</button>
+    </div>
+  </div>
+
+  <div id="previewModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="device-toggles">
+          <button id="btn-desktop" class="active" onclick="setDevice('desktop')"><i class="fas fa-desktop"></i></button>
+          <button id="btn-mobile" onclick="setDevice('mobile')"><i class="fas fa-mobile-alt"></i></button>
+        </div>
+        <button class="close-btn" onclick="closeModal()"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="iframe-wrapper">
+        <iframe id="projectIframe" src="" title="Project Preview"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
