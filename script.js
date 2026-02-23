@@ -1,4 +1,3 @@
-// Mobile Menu
 function toggleMenu() {
     const menu = document.getElementById('mobileMenu');
     menu.classList.toggle('active');
@@ -11,7 +10,7 @@ function toggleMenu() {
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Smooth Reveal
+    // Smooth Scale & Translate Reveal
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -27,9 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal-smooth').forEach(el => observer.observe(el));
 
-    // Glass Navbar
+    // Glass Navbar Trigger
     const nav = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 10) {
@@ -39,5 +38,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    console.log("Entreple V6: Minimalist Architecture Loaded.");
+    console.log("Entreple Ultimate SaaS Framework Loaded.");
 });
