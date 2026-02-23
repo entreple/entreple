@@ -1,0 +1,62 @@
+/* SIFIRLAMA VE DEĞİŞKENLER */
+:root {
+  --bg-color: #030303;
+  --text-main: #ffffff;
+  --text-muted: #999999;
+  --accent-color: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-border: rgba(255, 255, 255, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+/* NAVBAR (Tüm sayfalarda ortak) */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(3, 3, 3, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 100;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.logo { font-size: 1.5rem; font-weight: 800; color: var(--text-main); text-decoration: none; }
+.nav-links { display: flex; gap: 35px; }
+.nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; transition: color 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: var(--text-main); }
+.btn-primary { padding: 12px 28px; background-color: var(--text-main); color: var(--bg-color); border-radius: 50px; text-decoration: none; font-weight: 700; transition: all 0.3s ease; }
+
+/* SAYFA İÇERİK ALANLARI */
+.page-header {
+  padding: 150px 5% 50px 5%;
+  text-align: center;
+}
+.page-header h1 { font-size: 4rem; font-weight: 800; letter-spacing: -1px; }
+.page-header p { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 20px auto 0 auto; }
+
+/* MODAL / POP-UP (Sadece projects.html'de kullanılacak olsa da CSS'te durabilir) */
+.modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); backdrop-filter: blur(10px); opacity: 0; transition: opacity 0.3s ease; }
+.modal.show { display: flex; align-items: center; justify-content: center; opacity: 1; }
+.modal-content { background-color: #0a0a0a; width: 95%; height: 90vh; border-radius: 12px; border: 1px solid #333; overflow: hidden; display: flex; flex-direction: column; }
+.modal-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 25px; background-color: #111; border-bottom: 1px solid #222; }
+.device-toggles button { background: none; border: none; color: #666; font-size: 20px; margin-right: 20px; cursor: pointer; }
+.device-toggles button.active { color: #fff; }
+.close-btn { background: none; border: none; color: #fff; font-size: 24px; cursor: pointer; }
+.iframe-wrapper { flex-grow: 1; display: flex; justify-content: center; align-items: center; background-color: #000; padding: 20px; }
+#projectIframe { width: 100%; height: 100%; border-radius: 8px; background-color: #fff; border: none; transition: width 0.4s ease; }
