@@ -1,37 +1,47 @@
-// Mobile Menu Toggle
+// Mobile Menu Logic
 function toggleMenu() {
     const menu = document.getElementById('mobileMenu');
     menu.classList.toggle('active');
     
-    // Hamburger animation toggle
     const hamburger = document.querySelector('.hamburger');
     hamburger.classList.toggle('open');
+    
+    // Scroll kilitleme (Menü açıkken arka plan kaymasın diye)
+    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : 'auto';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Scroll Animations for modern fade-in effects
+    // Sinematik Reveal (Aşağıdan Yukarı Kayarak Belirme) Animasyonları
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
+                // Bir kere çalıştıktan sonra performansı artırmak için dinlemeyi bırakır
+                observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, observerOptions);
 
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
 
-    // Navbar Background blur on Scroll
+    // Akıllı Cam (Glassmorphism) Navbar Scroll Efekti
     const nav = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-            nav.style.background = 'rgba(0, 0, 0, 0.9)';
-            nav.style.borderBottom = '1px solid rgba(255, 255, 255, 0.08)';
+        if (window.scrollY > 10) {
+            nav.classList.add('scrolled');
+            nav.style.background = 'rgba(8, 12, 21, 0.85)'; // Marka rengine uyumlu transparanlık
         } else {
-            nav.style.background = 'rgba(0, 0, 0, 0.7)';
-            nav.style.borderBottom = '1px solid transparent';
+            nav.classList.remove('scrolled');
+            nav.style.background = 'rgba(8, 12, 21, 0.5)';
         }
     });
 
-    console.log("Entreple Digital Library Loaded.");
+    console.log("Entreple 'The Hook' Engine Initialized.");
 });
